@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APKMod Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header class="navbar">
+        <div class="logo">🚀 APK<span>Mod</span></div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar aplicaciones o juegos...">
+        </div>
+        <button id="open-upload-btn" class="upload-trigger-btn">+ Nueva APK Mod</button>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="container">
+        <h2>Últimos APK Mods Subidos</h2>
+        <div id="grid-apps" class="grid-apps">
+            <!-- Las aplicaciones se cargarán aquí dinámicamente con JS -->
+        </div>
+    </main>
+
+    <!-- Ventana Emergente de Descarga (Modal con Anuncios) -->
+    <div id="download-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <div class="modal-body">
+                
+                <!-- ANUNCIO SUPERIOR -->
+                <div class="anuncio-box">AD - ¡Descarga nuestro optimizador de Android gratis aquí!</div>
+
+                <img id="modal-img" src="" alt="App Icon">
+                <h3 id="modal-title">Nombre</h3>
+                <p><strong>Versión:</strong> <span id="modal-version"></span></p>
+                <p><strong>Tamaño:</strong> <span id="modal-size"></span></p>
+                
+                <!-- ANUNCIO CENTRAL -->
+                <div class="anuncio-box banner-llamativo">⚠️ AD: Tu teléfono puede estar lento. Haz clic aquí para limpiar.</div>
+
+                <p><strong>Características del Mod:</strong></p>
+                <p id="modal-mod-info" class="mod-features"></p>
+                
+                <!-- ANUNCIO INFERIOR (Cerca al botón) -->
+                <div class="anuncio-box">AD - Juegos de estrategia online gratis. Juega Ya.</div>
+
+                <!-- Botón de descarga con contador -->
+                <button id="modal-download-action" class="download-btn btn-bloqueado">Espera 10 segundos...</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana Emergente para Subir APK -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-upload">&times;</span>
+            <h3>Subir Nueva APK Mod</h3>
+            <form id="upload-form" class="upload-form">
+                <div class="form-group">
+                    <label for="app-name">Nombre de la App / Juego:</label>
+                    <input type="text" id="app-name" required placeholder="Ej: Geometry Dash Mod">
+                </div>
+                <div class="form-group">
+                    <label for="app-version">Versión:</label>
+                    <input type="text" id="app-version" required placeholder="Ej: v2.2.11">
+                </div>
+                <div class="form-group">
+                    <label for="app-size">Tamaño del archivo:</label>
+                    <input type="text" id="app-size" required placeholder="Ej: 85 MB">
+                </div>
+                <div class="form-group">
+                    <label for="app-image">Imagen del Logo (Subir archivo):</label>
+                    <input type="file" id="app-image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="app-features">Características del Mod:</label>
+                    <textarea id="app-features" required placeholder="Ej: Dinero ilimitado, todos los niveles..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="app-link">Enlace de Descarga original:</label>
+                    <input type="url" id="app-link" required placeholder="https://mediafire.com">
+                </div>
+                <button type="submit" class="download-btn">Publicar APK Mod</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
