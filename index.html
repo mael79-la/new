@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APKMod Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header class="navbar">
+        <div class="logo">🚀 APK<span>Mod</span></div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar aplicaciones o juegos...">
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="container">
+        <h2>Últimos APK Mods Subidos</h2>
+        <div id="grid-apps" class="grid-apps">
+            <!-- Las aplicaciones se cargarán aquí dinámicamente con JS -->
+        </div>
+    </main>
+
+    <!-- Ventana Emergente de Descarga (Modal) -->
+    <div id="download-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="App Icon">
+                <h3 id="modal-title">Nombre</h3>
+                <p><strong>Versión:</strong> <span id="modal-version"></span></p>
+                <p><strong>Tamaño:</strong> <span id="modal-size"></span></p>
+                <p><strong>Características del Mod:</strong></p>
+                <p id="modal-mod-info" class="mod-features"></p>
+                <a id="modal-link" href="#" target="_blank" class="download-btn">Descargar APK</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
