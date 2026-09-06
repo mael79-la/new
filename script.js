@@ -160,3 +160,11 @@ uploadForm.addEventListener("submit", (e) => {
 
     lector.readAsDataURL(archivosImagen[0]); // <--- Corregido parámetro de lectura [0]
 });
+fetchConSync('/api/guardar', {
+  method: 'POST',
+  body: JSON.stringify(misDatos)
+}).catch(err => {
+  if (err.message === 'OFFLINE') {
+    // Informar al usuario que se guardó localmente
+  }
+});
